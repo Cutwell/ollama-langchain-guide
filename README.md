@@ -1,4 +1,4 @@
-# <img src="resources/ollama.png" style="width:64px;padding-right:20px;margin-bottom:-8px;"> <img src="resources/langchain.png" style="width:64px;padding-right:20px;margin-bottom:-8px;"> Local LangChain Tutorial
+# <img src="resources/ollama.png" style="height:64px;padding-right:20px;margin-bottom:-8px;"> <img src="resources/langchain.png" style="height:64px;padding-right:20px;margin-bottom:-8px;"> Local LangChain Tutorial
  Develop LangChain using local LLMs with Ollama
 
 * LLM costs getting you down?
