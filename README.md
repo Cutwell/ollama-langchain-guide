@@ -1,4 +1,4 @@
-# <img src="resources/ollama.png" style="height:64px;padding-right:20px;margin-bottom:-8px;"> <img src="resources/langchain.png" style="height:64px;padding-right:20px;margin-bottom:-8px;"> Local LangChain Tutorial
+# <img src="resources/ollama.png" style="height:32px;margin-bottom:-8px;"> + <img src="local_langchain_tutorial/src/phi.svg" style="height:32px;margin-bottom:-8px;"> ⇨ <img src="resources/langchain.png" style="height:32px;padding-right:20px;margin-bottom:-8px;"> Local LangChain Tutorial
  Develop LangChain using local LLMs with Ollama
 
 * LLM costs getting you down?
@@ -35,26 +35,40 @@ poetry install
 
 ## Tutorial
 
-1. Browse the [available Ollama models](https://ollama.com/library) and select a model. Think about your local computers available RAM and GPU memory when picking the model + quantisation level. We will be using the `phi-2` model from Microsoft ([Ollama](https://ollama.com/library/phi), [Hugging Face](https://huggingface.co/microsoft/phi-2)) as it is both small and fast.
+1. Browse the [available Ollama models](https://ollama.com/library) and select a model.
+
+* Think about your local computers available RAM and GPU memory when picking the model + quantisation level.
+* We will be using the `phi-2` model from Microsoft ([Ollama](https://ollama.com/library/phi), [Hugging Face](https://huggingface.co/microsoft/phi-2)) as it is both small and fast.
+* Read [this](https://www.promptingguide.ai/models/phi-2) summary for advice on prompting the `phi-2` model optimally.
 
 ♻️
 ```sh
 ollama pull phi
 ```
 
-2. Start the Ollama server. This server can be queried with LangChain, or you can interact with it in this terminal.
+2. Start the Ollama server.
+
+* This server can be queried with LangChain, or you can interact with it in this terminal.
 
 ♻️
 ```sh
 ollama run phi
 ```
 
-3. Run the PyTest tests to check everything is working correctly.
+3. Run the PyTest tests in `/local_langchain_tutorial/tests` to check everything is working correctly.
 
 🆕
 ```sh
 poetry run pytest -rP local_langchain_tutorial/tests
 ```
+
+4. Get started building your own local LLM projects with the example StreamLit app in `/local_langchain_tutorial/src`.
+
+🆕
+```sh
+poetry run streamlit run local_langchain_tutorial/src/app.py --server.port=8080
+```
+
 
 ## License
 MIT

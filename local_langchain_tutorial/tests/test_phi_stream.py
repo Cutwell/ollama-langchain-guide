@@ -3,7 +3,7 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain_community.llms import Ollama
 
 
-def test_invoke():
+def test_phi_stream():
     llm = Ollama(
         model="phi",
         callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]),
