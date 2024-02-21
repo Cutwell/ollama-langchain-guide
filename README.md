@@ -64,7 +64,7 @@ poetry run pytest -rP local_langchain_tutorial/tests
 
 4. Get started building your own local LLM projects with the example StreamLit app in `/local_langchain_tutorial/src`.
 
-🆕
+♻️
 ```sh
 poetry run streamlit run local_langchain_tutorial/src/app.py --server.port=8080
 ```
