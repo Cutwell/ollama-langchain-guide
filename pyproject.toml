@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "local-langchain-tutorial"
+name = "ollama-langchain-guide"
 version = "0.1.0"
 description = "Develop LangChain using local LLMs with Ollama"
 authors = ["Cutwell"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "local_langchain_tutorial"}]
+packages = [{include = "ollama_langchain_guide"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"

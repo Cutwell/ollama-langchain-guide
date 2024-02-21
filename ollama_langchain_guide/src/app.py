@@ -5,11 +5,11 @@ from langchain_community.llms import Ollama
 
 st.set_page_config(
     page_title="Phi-2 Chatbot",
-    page_icon="local_langchain_tutorial/src/phi.svg",
+    page_icon="ollama_langchain_guide/src/phi.svg",
     initial_sidebar_state="collapsed",
     menu_items={
-        "Get Help": "https://github.com/Cutwell/local_langchain_tutorial",
-        "Report a bug": "https://github.com/Cutwell/local_langchain_tutorial/issues/new",
+        "Get Help": "https://github.com/Cutwell/ollama_langchain_guide",
+        "Report a bug": "https://github.com/Cutwell/ollama_langchain_guide/issues/new",
         "About": "Example chatbot app demonstrating Phi-2 Local LLM response streaming with LangChain and Ollama.",
     },
 )
@@ -17,7 +17,7 @@ st.set_page_config(
 
 @st.cache_resource
 def getSystemPrompt():
-    with open("local_langchain_tutorial/src/systemprompt.txt", "r") as file:
+    with open("ollama_langchain_guide/src/systemprompt.txt", "r") as file:
         return file.read()
 
 
@@ -36,7 +36,7 @@ def chat(prompt: str):
             st.markdown(prompt)
 
         # Display assistant response in chat message container
-        with st.chat_message("ai", avatar="local_langchain_tutorial/src/phi.svg"):
+        with st.chat_message("ai", avatar="ollama_langchain_guide/src/phi.svg"):
             # Get complete chat history, including latest question as last message
             history = "\n".join(
                 [f"{role}: {msg}" for role, msg in st.session_state.messages]
@@ -109,7 +109,7 @@ if __name__ == "__main__":
     _buttons = []
 
     # Friendly intro message, separate from the chat history
-    with st.chat_message("ai", avatar="local_langchain_tutorial/src/phi.svg"):
+    with st.chat_message("ai", avatar="ollama_langchain_guide/src/phi.svg"):
         st.markdown(
             f"Hi! I'm Phi-2, your helpful LLM assistant. Ask me anything and I'll do my best to respond.\n\nWhy not try these questions to get started?"
         )
@@ -141,7 +141,7 @@ if __name__ == "__main__":
         elif role == "human":
             avatar = "https://api.dicebear.com/7.x/thumbs/svg?seed=Kitty"
         else:
-            avatar = "local_langchain_tutorial/src/phi.svg"
+            avatar = "ollama_langchain_guide/src/phi.svg"
 
         with st.chat_message(role, avatar=avatar):
             st.markdown(message)

@@ -1,4 +1,4 @@
-# <img src="resources/ollama.png" style="height:32px;margin-bottom:-8px;"> + <img src="local_langchain_tutorial/src/phi.svg" style="height:32px;margin-bottom:-8px;"> ⇨ <img src="resources/langchain.png" style="height:32px;padding-right:20px;margin-bottom:-8px;"> Local LangChain Tutorial
+# <img src="resources/ollama.png" style="height:32px;margin-bottom:-8px;"> + <img src="ollama_langchain_guide/src/phi.svg" style="height:32px;margin-bottom:-8px;"> ⇨ <img src="resources/langchain.png" style="height:32px;padding-right:20px;margin-bottom:-8px;"> Ollama LangChain Guide
  Develop LangChain using local LLMs with Ollama
 
 * LLM costs getting you down?
@@ -28,8 +28,8 @@ ollama serve
 
 🆕
 ```sh
-git clone https://github.com/Cutwell/local-langchain-tutorial.git
-cd local-langchain-tutorial
+git clone https://github.com/Cutwell/ollama-langchain-guide.git
+cd ollama-langchain-guide
 poetry install
 ```
 
@@ -55,18 +55,18 @@ ollama pull phi
 ollama run phi
 ```
 
-3. Run the PyTest tests in `/local_langchain_tutorial/tests` to check everything is working correctly.
+3. Run the PyTest tests in `/ollama_langchain_guide/tests` to check everything is working correctly.
 
 🆕
 ```sh
-poetry run pytest -rP local_langchain_tutorial/tests
+poetry run pytest -rP ollama_langchain_guide/tests
 ```
 
-4. Get started building your own local LLM projects with the example StreamLit app in `/local_langchain_tutorial/src`.
+4. Get started building your own local LLM projects with the example StreamLit app in `/ollama_langchain_guide/src`.
 
 ♻️
 ```sh
-poetry run streamlit run local_langchain_tutorial/src/app.py --server.port=8080
+poetry run streamlit run ollama_langchain_guide/src/app.py --server.port=8080
 ```
 
 
