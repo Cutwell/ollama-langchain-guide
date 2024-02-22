@@ -69,6 +69,14 @@ poetry run pytest -rP ollama_langchain_guide/tests
 poetry run streamlit run ollama_langchain_guide/src/app.py --server.port=8080
 ```
 
+## Pros and Cons of Phi-2
+
+|**Pros**|**Cons**|
+|:---:|:---:|
+|Natural language, human-like outputs.|Can distract itself, prone to creating logic puzzles based on user queries + tries to solve them itself.|
+|Context window of 2048 tokens - can use chat history in answers.|Often ignores established facts in chat history - answers same question multiple ways in the same conversation.|
+|Can output syntax-correct Python code.|Bad at generating code that achieves desired goal - e.g.: outputs a syntax-correct function to calculate Pi, but the outputs are garbage.|
+|Very fast response time.||
 
 ## License
 MIT
